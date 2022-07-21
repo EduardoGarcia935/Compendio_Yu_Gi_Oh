@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgb(30, 30, 30);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_title{
+    background-color: aqua;
+    padding: 0 20px;
+}
+
+.container_title h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.5em;
+}
+
+.container_form{
+    text-align: center;
+    background-color: cadetblue;
+    height: 100px;
+}
+
+.container_form form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+}
+
+input[type = 'text']{
+    width: 280px;
+}
+
+.selection{
+    width: 280px;
+}
+
+.container_cards{
+    background-color: violet;
+}
+
+.container-card{
+    background-color: white;
+    min-width: 30%;
+    height: 40%;
+    text-align: center;
+}
+
+.container-card .container-img{
+    background-color: aqua;
+}
+
+.container-card .container-img img{
+    width: 70%;
+}
+
+.container-card .container-atributes{
+    background-color: violet;
+    text-align: justify;
+}
+
+@media screen and (max-width: 870px) {
+
+    .container_form{
+        height: 250px;
+    }
+
+    .container_form form{
+        flex-direction: column;
+    }
+
+    input[type = 'text'] , .selection{
+        width: 80%;
+    }
+}
+
