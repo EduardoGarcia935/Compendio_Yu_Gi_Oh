@@ -4,6 +4,3 @@ fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php?language=pt')
         console.log(json)
     })
 
-function criarCarta(id){
-    document.createElement('div')
-}
