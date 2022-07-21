@@ -14,57 +14,19 @@
             <h1>Compêndio de <span>Yu-Gi-Oh!</span></h1>
         </div>
         <div class="container_form">
-            <form action="">
-                <input type="text" name="" id="" placeholder="Digite o nome da carta" class="form-control ">
-                <select name="" id=""  class="form-select selection">
-                    <option value="">Selecione o tipo de carta</option>
-                    <option value="">Monstro</option>
-                    <option value="">Magia</option>
-                    <option value="">Armadilha</option>
+            <div class="form">
+                <input type="text" name="nome" id="" placeholder="Digite o nome da carta" class="form-control nome" required>
+                <select name="tipo" id=""  class="form-select selection" required>
+                    <option value="" >Selecione o tipo de carta</option>
+                    <option value="monstro">Monstro</option>
+                    <option value="magia">Magia</option>
+                    <option value="armadilha">Armadilha</option>
                 </select>
-                <input type="submit" value="Pesquisar" class="btn btn-primary ">
-            </form>
+                <input type="submit" value="Pesquisar" class="btn btn-primary submit">
+            </div>
         </div>
         <section class="area-cartas">
-            <div class="card">
-                <div class="img_container">
-                    <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" alt="">
-                </div>
-                <div class="text_container">
-                    <h2>Name of the card</h2>
-                    <p>djneiowdjiwdjopkdkewdopkopwedkopewneoiwfnoienwfiorfmrfiomeriowmfmfinefin</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img_container">
-                    <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" alt="">
-                </div>
-                <div class="text_container">
-                    <h2>Name of the card</h2>
-                    <p>djneiowdjiwdjopkdkewdopkopwedkopewneoiwfnoienwfiorfmrfiomeriowmfmfinefin</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img_container">
-                    <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" alt="">
-                </div>
-                <div class="text_container">
-                    <h2>Name of the card</h2>
-                    <p>djneiowdjiwdjopkdkewdopkopwedkopewneoiwfnoienwfiorfmrfiomeriowmfmfinefin</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="img_container">
-                    <img src="https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg" alt="">
-                </div>
-                <div class="text_container">
-                    <h2>Name of the card</h2>
-                    <p>djneiowdjiwdjopkdkewdopkopwedkopewneoiwfnoienwfiorfmrfiomeriowmfmfinefin</p>
-                </div>
-            </div>
+            
         </section>
     </main>
     <script src="./assets/js/app.js"></script>

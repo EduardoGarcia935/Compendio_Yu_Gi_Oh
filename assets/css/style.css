@@ -35,10 +35,9 @@ main{
     width: 100%;
     text-align: center;
     height: 100px;
-    background-color: aqua;
 }
 
-.container_form form {
+.container_form .form {
     height: 100%;
     display: flex;
     align-items: center;
@@ -55,7 +54,6 @@ input[type = 'text']{
 
 .area-cartas{
     padding: 20px 10px 10px 10px;
-    background-color: violet;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,17 +61,15 @@ input[type = 'text']{
 }
 
 .card{
-    width: 60%;
+    width: 50%;
     height: 300px;
-    background-color: red;
     display: flex;
     flex-direction: row;
     padding: 0%;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
 }
 
 .card .img_container{
-    background-color: blueviolet;
     height: 100%;
     width: 40%;
 }
@@ -84,7 +80,6 @@ input[type = 'text']{
 }
 
 .card .text_container{
-    background-color: aqua;
     padding: 20px;
     width: 60%;
     height: 100%;
@@ -97,7 +92,7 @@ input[type = 'text']{
         height: 250px;
     }
 
-    .container_form form{
+    .container_form .form{
         flex-direction: column;
     }
 
