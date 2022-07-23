@@ -9,14 +9,24 @@ btnSubmit.addEventListener('click' , e=>{
     if(!inputNome.value || !inputTipo.value){
         return
     }
+    area_cartas.innerHTML = null
+    let nome = inputNome.value
+    let tipo = inputTipo.value
 
-    criarCard(inputNome.value , inputTipo.value , 'https://storage.googleapis.com/ygoprodeck.com/pics/27551.jpg')
+    fetch(`https://db.ygoprodeck.com/api/v7/cardinfo.php?language=pt&fname=${nome}&type=${tipo}`)
+        .then(resp => resp.json())
+        .then(json =>{
+
+            for(card of json.data){
+                criarCard(card.name , card.desc , `https://storage.googleapis.com/ygoprodeck.com/pics/${card.id}.jpg`)
+            }
+            
+        })
 })
 
 
 function criarCard(nome , descricao , src){
 
-    area_cartas.innerHTML = null
 
     const divPai = document.createElement('div')
     divPai.setAttribute('class' , 'card')
@@ -30,12 +40,12 @@ function criarCard(nome , descricao , src){
 
     const divText = document.createElement('div')
     divText.setAttribute('class' , 'text_container')
-    const h2 = document.createElement('h2')
-    h2.innerHTML = nome
+    const h3 = document.createElement('h3')
+    h3.innerHTML = nome
     const p = document.createElement('p')
     p.innerHTML = descricao
 
-    divText.appendChild(h2)
+    divText.appendChild(h3)
     divText.appendChild(p)
 
     divPai.appendChild(divImg)
@@ -43,5 +53,7 @@ function criarCard(nome , descricao , src){
 
     area_cartas.appendChild(divPai)
 }
+
+
 
 

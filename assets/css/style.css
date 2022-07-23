@@ -85,6 +85,10 @@ input[type = 'text']{
     height: 100%;
 }
 
+.card .text_container p{
+    font-size: 12px;
+}
+
 @media screen and (max-width: 870px) {
 
     .container_form{
@@ -118,4 +122,3 @@ input[type = 'text']{
         height: 60%;
     }
 }
-
