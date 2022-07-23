@@ -17,10 +17,13 @@ btnSubmit.addEventListener('click' , e=>{
         .then(resp => resp.json())
         .then(json =>{
 
-            for(card of json.data){
-                criarCard(card.name , card.desc , `https://storage.googleapis.com/ygoprodeck.com/pics/${card.id}.jpg`)
+            try {
+                for(card of json.data){
+                    criarCard(card.name , card.desc , `https://storage.googleapis.com/ygoprodeck.com/pics/${card.id}.jpg`)
+                }
+            } catch (error) {
+                alerta()
             }
-            
         })
 })
 
@@ -54,6 +57,24 @@ function criarCard(nome , descricao , src){
     area_cartas.appendChild(divPai)
 }
 
+function alerta(){
+    const div = document.createElement('div')
+    div.setAttribute('class' , 'alert alert-warning alert-dismissible fade show')
+    div.setAttribute('role', 'alert')
 
+    const strong = document.createElement('strong')
+    strong.innerHTML = 'Desculpe !'
+    
+    div.appendChild(strong)
+    div.innerHTML += 'Sua carta não foi encontrada'
 
+    const btn = document.createElement('button')
+    btn.setAttribute('type' , 'button')
+    btn.setAttribute('class' , 'btn-close')
+    btn.setAttribute('data-bs-dismiss' , 'alert')
+    btn.setAttribute('aria-label' , 'Close')
 
+    div.appendChild(btn)
+
+    area_cartas.appendChild(div)
+}
